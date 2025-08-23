@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payoo Mobile Bank</title>
+    <link rel="stylesheet" href="./style.css" />
 
     <!-- Tailwind CDN -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
@@ -16,5 +17,27 @@
     />
     <script src="./script.js"></script>
   </head>
-  <body></body>
+  <body class="bg-[#F4F5F7] h-[100vh] flex justify-center items-center">
+    <form class="bg-white p-8 rounded-2xl w-[350px]">
+      <div class="mb-5">
+        <label class="font-semibold" for="">Mobile Number</label>
+        <input
+          type="text"
+          placeholder="Enter your number"
+          class="input mt-2 !rounded-3xl !bg-[#F4F5F7] !border-none"
+        />
+      </div>
+      <div class="mb-5">
+        <label class="font-semibold" for="">4 Digit Pin</label>
+        <input
+          type="text"
+          placeholder="Enter 4 digit pin"
+          class="input mt-2 !rounded-3xl !bg-[#F4F5F7] !border-none"
+        />
+      </div>
+      <button class="btn !text-white !bg-[#0874F2] w-full !rounded-3xl">
+        Login
+      </button>
+    </form>
+  </body>
 </html>
