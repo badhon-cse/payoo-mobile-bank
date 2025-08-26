@@ -56,12 +56,14 @@
 
       <div class="grid grid-cols-3 gap-4 p-5">
         <div
+          id="add-money"
           class="border-1 border-gray-300 rounded-xl text-center h-[100px] flex flex-col justify-center"
         >
           <img class="mx-auto" src="./assets/wallet1.png" alt="" />
           <p>Add Money</p>
         </div>
         <div
+          id="cashout"
           class="border-1 border-gray-300 rounded-xl p-3 text-center h-[100px] flex flex-col justify-center"
         >
           <img class="mx-auto" src="./assets/send1.png" alt="" />
@@ -94,7 +96,8 @@
       </div>
     </div>
 
-    <div class="max-w-lg mx-auto p-5">
+    <!-- add money section -->
+    <div id="add-money-section" class="max-w-lg mx-auto p-5">
       <h3 class="font-bold mt-3 mb-4">Add Money</h3>
       <div class="bg-white rounded-xl p-5">
         <div>
@@ -146,7 +149,47 @@
         </button>
       </div>
     </div>
+    <!-- CashOut Section -->
 
+    <div id="cashout-section" class="max-w-lg mx-auto p-5 hidden">
+      <h3 class="font-bold mt-3 mb-4">Cash Out</h3>
+      <div class="bg-white rounded-xl p-5">
+        <div class="mb-5">
+          <label class="font-semibold" for="">Agent Number</label>
+          <input
+            id=""
+            type="text"
+            placeholder="Enter 11 digit number"
+            class="input mt-2 !rounded-3xl !bg-[#F4F5F7] !border-none !w-full"
+          />
+        </div>
+        <div class="mb-5">
+          <label class="font-semibold" for="">Amount</label>
+          <input
+            id="withdraw-amount"
+            type="text"
+            placeholder="Enter Amount to withdraw"
+            class="input mt-2 !rounded-3xl !bg-[#F4F5F7] !border-none !w-full"
+          />
+        </div>
+        <div class="mb-5">
+          <label class="font-semibold" for="">Pin Number</label>
+          <input
+            id=""
+            type="text"
+            placeholder="Enter 4 digit pin number"
+            class="input mt-2 !rounded-3xl !bg-[#F4F5F7] !border-none !w-full"
+          />
+        </div>
+
+        <button
+          id="withdraw-money-button"
+          class="btn !text-white !bg-[#0874F2] w-full !rounded-3xl"
+        >
+          Withdraw Money
+        </button>
+      </div>
+    </div>
     <script src="./home.js"></script>
   </body>
 </html>
