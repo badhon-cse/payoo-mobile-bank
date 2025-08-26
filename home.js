@@ -54,12 +54,17 @@ document
     e.preventDefault();
 
     const selectedBank = getValue("bank");
-    const accountnumber = getValueInt("account-number");
+    const accountNumber = getValue("account-number");
     const addAmount = getValueInt("add-amount");
     const pin = getValueInt("add-pin");
     const balance = getInnerText("balance");
 
-    if (accountnumber.length != 11) {
+    if (!addAmount || addAmount <= 0) {
+      alert("Invalid Amount");
+      return;
+    }
+
+    if (accountNumber.length != 11) {
       alert("inalid Mobile Number");
       return;
     }
@@ -117,6 +122,12 @@ document
     e.preventDefault();
     const withdrawAmount = getValueInt("withdraw-amount");
     const balance = getInnerText("balance");
+
+    if (withdrawAmount <= 0 || withdrawAmount > balance || !withdrawAmount) {
+      alert("Invalid Amount");
+      return;
+    }
+
     updateBalance = balance - withdrawAmount;
     document.getElementById("balance").innerText = updateBalance;
 
